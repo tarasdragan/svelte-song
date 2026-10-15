@@ -10,6 +10,7 @@ export const actions: Actions = {
     const data = await request.formData()
     const login = String(data.get("login")).toUpperCase()
     const password = data.get("password")
+    console.log("1")
 
     // Валідація (перевірка на порожнечу)
     if (!login || !password) {
