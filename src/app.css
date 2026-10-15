@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Повне скидання стандартної палітри */
+  --color-*: initial;
+
+  /* --- Світла тема (Default) --- */
+  --color-oo-bg: #ebebeb;
+  --color-oo-txt: #0f172a;
+  --color-oo-card: #bbbec0;
+
+  --color-oo-input-bg: #ffffff;
+  --color-oo-input-txt: #0f172a;
+  --color-oo-input-placeholder: #94a3b8;
+
+  --color-oo-header: #bbbec0;
+  --color-oo-btn-ghost: #475569;
+
+  /* Додаткові для логістики */
+  --color-oo-border: #e2e8f0; /* Лінії таблиць */
+  --color-oo-accent: #5586ce;
+  --color-oo-side: #1e293b; /* Бокова панель (Side Nav) */
+  --color-oo-row-hover: #f1f5f9; /* Підсвічування рядка таблиці */
+
+  /* Статуси */
+  --color-oo-error: #dc2626;
+  --color-oo-success: #16a34a;
+  --color-oo-warning: #ea580c;
+
+  --variant-dark: .dark &;
+}
+
+/* --- Темна тема --- */
+.dark {
+  --color-oo-bg: #020617;
+  --color-oo-txt: #7b8a9b;
+  --color-oo-card: #0f172a;
+
+  --color-oo-input-bg: #1e293b;
+  --color-oo-input-txt: #7b8a9b;
+  --color-oo-input-placeholder: #546883;
+
+  --color-oo-header: #0f172a;
+  --color-oo-btn-ghost: #94a3b8;
+
+  --color-oo-border: #1e293b;
+  --color-oo-accent: #5988cf;
+  --color-oo-side: #020617; /* Ще темніша за фон або така сама */
+  --color-oo-row-hover: #1e293b;
+
+  --color-oo-error: #ef4444;
+  --color-oo-success: #22c55e;
+  --color-oo-warning: #f97316;
+}
